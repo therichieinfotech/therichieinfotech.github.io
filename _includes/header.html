@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US" class="js svg background-fixed">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <link rel="shortcut icon" href="{{ site.url }}/assets/images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/blocks.css">
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/colors-dark.css">
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/ie8.css">
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/ie9.css">
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/style.css">
+    <script src="{{ site.url }}/assets/js/jquery.js"></script>
+</head>
+
+<body class="page has-header-image colors-light">
+    <div id=" page" class="site">
+        <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+        <header id="masthead" class="site-header" role="banner">
+
+            <div class="custom-header">
+
+                <div class="custom-header-media">
+                    <div id="wp-custom-header" class="wp-custom-header"><img
+                            src="{{ site.url }}/assets/images/header.jpg" width="2000" height="1200"
+                            alt="The Richie Infotech"></div>
+                </div>
+
+                <div class="site-branding" style="margin-bottom: 72px;">
+                    <div class="wrap">
+
+                        <a href="http://localhost/wordpress/" class="custom-logo-link" rel="home"
+                            aria-current="page"><img width="250" height="250"
+                                src="{{ site.url }}/assets/images/{{ site.logo }}" class="custom-logo"
+                                alt="The Richie Infotech"
+                                sizes="(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px"></a>
+                        <div class="site-branding-text">
+                            <h1 class="site-title"><a href="http://localhost/wordpress/" rel="home">{{ site.title }}</a>
+                            </h1>
+
+                            <p class="site-description">{{ site.tagline }}</p>
+                        </div><!-- .site-branding-text -->
+
+
+                    </div><!-- .wrap -->
+                </div><!-- .site-branding -->
+
+            </div><!-- .custom-header -->
+
+            <div class="navigation-top">
+                <div class="wrap">
+                    <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Top Menu">
+                        <button class="menu-toggle" aria-controls="top-menu" aria-expanded="false">
+                            <span class="material-icons icon icon-bars" aria-hidden="true" role="img">menu</span>
+                            <span class="material-icons icon icon-close" aria-hidden="true" role="img">close</span>
+                            Menu
+                        </button>
+
+                        <div class="menu-top-menu-container">
+                            <ul id="top-menu" class="menu">
+                                {% for menu_item in site.data.navigation_top %}
+                                <li class="menu-item"><a href="{{ site.url }}/{{ menu_item.url }}">{{ menu_item.title
+                                        }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <a href="#content" class="menu-scroll-down"><svg class="icon icon-arrow-right"
+                                aria-hidden="true" role="img">
+                                <use href="#icon-arrow-right" xlink:href="#icon-arrow-right"></use>
+                            </svg><span class="screen-reader-text">Scroll down to content</span></a>
+                    </nav><!-- #site-navigation -->
+                </div><!-- .wrap -->
+            </div><!-- .navigation-top -->
+
+        </header><!-- #masthead -->
+
+
+        <div class="site-content-contain">
+            <div id="content" class="site-content">
+
+                <div class="wrap">
+
+                    <div id="primary" class="content-area">
+                        <main id="main" class="site-main" role="main">

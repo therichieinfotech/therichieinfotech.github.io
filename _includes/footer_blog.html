@@ -1,0 +1,63 @@
+</main><!-- #main -->
+</div><!-- #primary -->
+
+{% include sidebar.html %}
+</div><!-- .wrap -->
+
+
+</div><!-- #content -->
+
+<footer id="colophon" class="site-footer" role="contentinfo">
+    <div class="wrap">
+
+        <aside class="widget-area" role="complementary" aria-label="Footer">
+            <div class="widget-column footer-widget-1">
+                <section id="menu-1" class="widget widget_menu">
+                    <h2 class="widget-title">Sitemap</h2>
+                    <nav role="navigation" aria-label="Sitemap">
+                        <ul>
+                            {% for menu_item in site.data.navigation_top %}
+                            <li class="menu-item"><a href="{{ site.url }}/{{ menu_item.url }}">{{ menu_item.title
+                                    }}</a></li>
+                            {% endfor %}
+                        </ul>
+
+                    </nav>
+                </section>
+            </div>
+            <div class="widget-column footer-widget-2">
+                <section id="menu-2" class="widget widget_menu">
+                    <h2 class="widget-title">Important Links</h2>
+                    <nav role="navigation" aria-label="Important Links">
+                        <ul>
+                            {% for menu_item in site.data.navigation_bottom %}
+                            <li class="menu-item"><a href="{{ site.url }}/{{ menu_item.url }}">{{ menu_item.title
+                                    }}</a></li>
+                            {% endfor %}
+                        </ul>
+
+                    </nav>
+                </section>
+            </div>
+        </aside><!-- .widget-area -->
+
+        <div class="site-info">
+            <a href="https://wordpress.org/" class="imprint">
+                Proudly powered by WordPress </a>
+        </div><!-- .site-info -->
+    </div><!-- .wrap -->
+</footer><!-- #colophon -->
+</div><!-- .site-content-contain -->
+</div>
+
+<script src="{{ site.url }}/assets/js/global.js"></script>
+<script src="{{ site.url }}/assets/js/html5.js"></script>
+<script src="{{ site.url }}/assets/js/jquery.scrollTo.js"></script>
+<script src="{{ site.url }}/assets/js/navigation.js"></script>
+<script src="{{ site.url }}/assets/js/skip-link-focus-fix.js"></script>
+<script src="{{ site.url }}/assets/js/main.js"></script>
+<script src="{{ site.url }}/assets/js/lunr.min.js"></script>
+<script src="{{ site.url }}/assets/js/search.js"></script>
+</body>
+
+</html>

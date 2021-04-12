@@ -1,0 +1,25 @@
+{% include header_blog.html %}
+{% for post in site.posts %}
+<article id="post-1" class="post-1 post type-post status-publish format-standard hentry category-uncategorized">
+    <header class="entry-header">
+        <div class="entry-meta">
+            <span class="screen-reader-text">Posted on</span>
+            <a href="{{ post.url }}" rel="bookmark">
+                <time class="entry-date published updated" datetime="{{ post.date }}">
+                    {{ post.date | date: '%B %d, %Y'}}
+                </time>
+            </a>
+        </div>
+        <!-- .entry-meta -->
+        <h3 class="entry-title"><a href="{{ post.url }}" rel="bookmark">{{ post.title }}</a></h3>
+    </header><!-- .entry-header -->
+
+
+    <div class="entry-content">
+        <p>{{ post.excerpt }}</p>
+    </div><!-- .entry-content -->
+
+
+</article>
+{% endfor %}
+{% include footer_blog.html %}

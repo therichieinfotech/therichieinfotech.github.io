@@ -1,0 +1,31 @@
+<aside id="secondary" class="widget-area" role="complementary" aria-label="Blog Sidebar">
+    <section id="tags" class="widget widget_tags">
+        {% for tag in site.tags %}
+        <h2 class="widget-title">{{ tag[0] }}</h2>
+        <nav role="navigation" aria-label="Recent Posts">
+            <ul>
+                {% for post in tag[1] %}
+                <li>
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+        {% endfor %}
+
+    </section>
+    <section id="categories" class="widget widget_categories">
+        {% for category in site.categories %}
+        <h2 class="widget-title">{{ category[0] }}</h2>
+        <nav role="navigation" aria-label="Recent Posts">
+            <ul>
+                {% for post in category[1] %}
+                <li>
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+        {% endfor %}
+    </section>
+</aside><!-- #secondary -->
